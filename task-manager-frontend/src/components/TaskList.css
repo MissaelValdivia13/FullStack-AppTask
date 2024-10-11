@@ -1,0 +1,191 @@
+body {
+    font-family: 'Roboto', sans-serif; /* Aplicar la fuente Roboto a todo el cuerpo */
+}
+
+.task-list-container {
+    padding: 30px;
+    margin: 20px auto;
+    width: 90%;
+    max-width: 1000px;
+    background: linear-gradient(135deg, #a5d6a7, #81c784); /* Degradado verde claro */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    transition: transform 0.3s;
+}
+
+.task-list-container:hover {
+    transform: scale(1.02);
+}
+
+.task-list-container h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #333;
+    font-size: 2em;
+}
+
+.task-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.task-table th, .task-table td {
+    padding: 15px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+.task-table th {
+    background-color: #4CAF50;
+    color: white;
+    font-weight: 500;
+}
+
+.task-table tr:hover {
+    background-color: #f9f9f9;
+}
+
+.completed {
+    text-decoration: line-through;
+    color: gray;
+}
+
+.task-table td {
+    vertical-align: middle;
+}
+
+.edit-btn, .delete-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    margin: 0 5px;
+}
+
+.edit-btn {
+    color: #007bff;
+}
+
+.delete-btn {
+    color: #dc3545;
+}
+
+.edit-btn:hover {
+    color: #0056b3;
+}
+
+.delete-btn:hover {
+    color: #c82333;
+}
+
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.modal-content {
+    background-color: white;
+    border-radius: 10px;
+    padding: 20px;
+    width: 300px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+    animation: fadeIn 0.3s ease;
+}
+
+.modal-input,
+.modal-textarea {
+    width: 100%;
+    padding: 12px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin-left: -15px;
+}
+
+.modal-textarea {
+    height: 100px;
+    resize: none; 
+}
+
+.modal-buttons {
+    display: flex;
+    justify-content: space-between;
+}
+
+.modal-save-button {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 12px 15px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.modal-cancel-button {
+    background-color: #f44336; 
+    color: white;
+    border: none;
+    padding: 12px 15px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.modal-save-button:hover {
+    background-color: #45a049; 
+}
+
+.modal-cancel-button:hover {
+    background-color: #d32f2f; 
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.completed {
+    text-decoration: line-through;
+    color: gray;
+}
+
+.action-icon {
+    cursor: pointer;
+    margin: 0 5px;
+    color: #007bff;
+}
+
+.action-icon:hover {
+    color: #0056b3;
+}
+
+.view-completed-button {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 12px 20px;
+    font-size: 18px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    margin-top: 20px;
+    display: block;
+    width: 100%;
+}
+
+.view-completed-button:hover {
+    background-color: #45a049;
+    transform: scale(1.05);
+}
